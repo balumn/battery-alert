@@ -21,7 +21,7 @@ def battery_check():
 		notification.show()
 		del notification
 	
-	elif state == "Charging" and percentage == 100:
+	elif state == "Full" and percentage == 100:
 		notification = notify2.Notification("Battery Full!",str(percentage)+"%. Unplug me.","/home/balumn/dev/battery-alert/battery-full.png")
 		notification.show()
 		del notification
@@ -32,5 +32,5 @@ def battery_check():
 		notification.show()
 		del notification
 	gc.collect()
-	
+
 if __name__ == "__main__": battery_check()
